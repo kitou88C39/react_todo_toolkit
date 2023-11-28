@@ -18,9 +18,11 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
       <div className={styles.right_item}>
         <Checkbox
           checked={task.completed}
-          onChange={handleChange}
-          inputProps={{ 'aria-label': 'controlled' }}
+          onClick={() => console.log(`check ${task.id}`)}
+          className={styles.checkbox}
         />
+        <button></button>
+        <button></button>
       </div>
     </div>
   );
