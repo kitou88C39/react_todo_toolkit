@@ -8,14 +8,16 @@ interface PropTypes {
   task: { id: number; title: string; completed: boolean };
 }
 
-const TaskItem: React.FC = ({ task }) => {
+const TaskItem: React.FC<PropTypes> = ({ task }) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}>
         <EventNoteIcon />
         <div className={styles.title_text}>{task.title}</div>
+      </div>
+      <div className={styles.right_item}>
         <Checkbox
-          checked={checked}
+          checked={task.completed}
           onChange={handleChange}
           inputProps={{ 'aria-label': 'controlled' }}
         />
