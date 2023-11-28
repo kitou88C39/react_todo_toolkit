@@ -21,8 +21,18 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
           onClick={() => console.log(`check ${task.id}`)}
           className={styles.checkbox}
         />
-        <button></button>
-        <button></button>
+        <button
+          onClick={() => console.log(`edit ${task.id}`)}
+          className={styles.edit_button}
+        >
+          <EditIcon className={styles.icon} />
+        </button>
+        <button
+          onClick={() => console.log(`delete ${task.id}`)}
+          className={styles.delete_button}
+        >
+          <DeleteIcon className={styles.icon} />
+        </button>
       </div>
     </div>
   );
