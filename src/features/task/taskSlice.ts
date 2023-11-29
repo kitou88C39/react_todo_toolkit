@@ -4,6 +4,7 @@ import { RootState, AppThunk } from '../../app/store';
 export interface TaskState {
   idCounter: number;
   tasks: { id: number; title: string; completed: boolean }[];
+  selectedTask: { id: number; title: string; completed: boolean };
 }
 
 const initialState: CounterState = {
