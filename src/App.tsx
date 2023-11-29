@@ -1,6 +1,6 @@
 import Header from './components/header/Header';
 import styles from './App.module.scss';
-import TaskForm from './features/tasks/taskForm/TaskForm';
+import TaskForm from './features/task/taskForm/TaskForm';
 
 const App: React.FC = () => {
   return (
