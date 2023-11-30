@@ -41,7 +41,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
           <DeleteIcon className={styles.icon} />
         </button>
       </div>
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={handleClose} className={styles.modal}>
         <div className={styles.modal_content}>
           <div className={styles.modal_title}>Edit</div>
         </div>
