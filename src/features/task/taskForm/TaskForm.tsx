@@ -12,7 +12,7 @@ const TaskForm: React.FC = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm<Inputs>();
   const handleCreate = (data: Inputs) => {
-    console.log(data);
+    dispatch(createTask);
     reset();
   };
   return (
