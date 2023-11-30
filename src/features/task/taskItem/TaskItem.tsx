@@ -10,6 +10,14 @@ interface PropTypes {
 }
 
 const TaskItem: React.FC<PropTypes> = ({ task }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.title}>
