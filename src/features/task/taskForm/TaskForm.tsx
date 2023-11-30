@@ -19,6 +19,10 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
     dispatch(createTask(data.taskTitle));
     reset();
   };
+  const handleEdit = (data: Inputs) => {
+    console.log(data);
+  };
+
   return (
     <div className={styles.root}>
       <form onSubmit={handleSubmit(handleCreate)} className={styles.form}>
