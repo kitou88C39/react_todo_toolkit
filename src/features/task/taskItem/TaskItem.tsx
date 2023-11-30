@@ -5,6 +5,7 @@ import styles from './TaskItem.module.scss';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import TaskForm from '../taskForm/TaskForm';
 
 interface PropTypes {
   task: { id: number; title: string; completed: boolean };
@@ -44,6 +45,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
       <Modal open={open} onClose={handleClose} className={styles.modal}>
         <div className={styles.modal_content}>
           <div className={styles.modal_title}>Edit</div>
+          <TaskForm />
         </div>
       </Modal>
     </div>
