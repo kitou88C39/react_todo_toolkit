@@ -32,8 +32,8 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
         />
         {edit ? (
           <div className={styles.button_wrapper}>
-            <button>Submit</button>
-            <button>Cancel</button>
+            <button type='submit'>Submit</button>
+            <button type='button'>Cancel</button>
           </div>
         ) : null}
       </form>
