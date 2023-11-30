@@ -30,10 +30,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
           onClick={() => console.log(`check ${task.id}`)}
           className={styles.checkbox}
         />
-        <button
-          onClick={() => console.log(`edit ${task.id}`)}
-          className={styles.edit_button}
-        >
+        <button onClick={handleOpen} className={styles.edit_button}>
           <EditIcon className={styles.icon} />
         </button>
         <button
@@ -49,7 +46,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <div></div>
+        <div>モーダル</div>
       </Modal>
     </div>
   );
