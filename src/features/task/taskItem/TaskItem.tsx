@@ -1,4 +1,5 @@
 import Checkbox from '@mui/material/Checkbox';
+import Modal from '@mui/material/Modal';
 import styles from './TaskItem.module.scss';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import EditIcon from '@mui/icons-material/Edit';
