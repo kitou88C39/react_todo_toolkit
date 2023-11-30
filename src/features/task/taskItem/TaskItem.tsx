@@ -1,3 +1,4 @@
+import React from 'react';
 import Checkbox from '@mui/material/Checkbox';
 import Modal from '@mui/material/Modal';
 import styles from './TaskItem.module.scss';
@@ -46,7 +47,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <div>モーダル</div>
+        <div className={styles.modal_content}></div>
       </Modal>
     </div>
   );
