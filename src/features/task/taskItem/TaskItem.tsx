@@ -43,6 +43,14 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
           <DeleteIcon className={styles.icon} />
         </button>
       </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <div></div>
+      </Modal>
     </div>
   );
 };
