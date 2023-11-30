@@ -8,6 +8,10 @@ type Inputs = {
   taskTitle: string;
 };
 
+type PropTypes = {
+  edit?: boolean;
+};
+
 const TaskForm: React.FC = () => {
   const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm<Inputs>();
