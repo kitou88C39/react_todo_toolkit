@@ -12,7 +12,7 @@ type PropTypes = {
   edit?: boolean;
 };
 
-const TaskForm: React.FC = () => {
+const TaskForm: React.FC<PropTypes> = ({ edit }) => {
   const dispatch = useDispatch();
   const { register, handleSubmit, reset } = useForm<Inputs>();
   const handleCreate = (data: Inputs) => {
@@ -24,7 +24,7 @@ const TaskForm: React.FC = () => {
       <form onSubmit={handleSubmit(handleCreate)} className={styles.form}>
         <TextField
           id='outlined-basic'
-          label='New Task'
+          label={edit ? 'Edit Task' : 'New Task'}
           variant='outlined'
           inputRef={register}
           name='taskTitle'
