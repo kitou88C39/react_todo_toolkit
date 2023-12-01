@@ -34,9 +34,12 @@ export const taskSlice = createSlice({
   },
 });
 
-export const { createTask } = taskSlice.actions;
+export const { createTask, handleModalOpen } = taskSlice.actions;
 
 export const selectTask = (state: RootState): TaskState['tasks'] =>
   state.task.tasks;
+
+export const selectIsModalOpen = (state: RootState): TaskState['isModalOpen'] =>
+  state.task.isModalOpen;
 
 export default taskSlice.reducer;
