@@ -20,7 +20,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
     dispatch(handleModalOpen(true));
   };
   const handleClose = () => {
-    setOpen(false);
+    dispatch(handleModalOpen(false));
   };
 
   return (
