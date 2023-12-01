@@ -25,7 +25,10 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
 
   return (
     <div className={styles.root}>
-      <form onSubmit={handleSubmit(handleCreate)} className={styles.form}>
+      <form
+        onSubmit={edit ? handleSubmit(handleEdit) : handleSubmit(handleCreate)}
+        className={styles.form}
+      >
         <TextField
           id='outlined-basic'
           label={edit ? 'Edit Task' : 'New Task'}
