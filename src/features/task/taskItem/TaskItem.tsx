@@ -14,7 +14,7 @@ interface PropTypes {
 }
 
 const TaskItem: React.FC<PropTypes> = ({ task }) => {
-  const [open, setOpen] = React.useState(false);
+  const isModalOpen = useSelector(selectIsModalOpen);
   const handleOpen = () => {
     setOpen(true);
   };
