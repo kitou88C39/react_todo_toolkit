@@ -1,9 +1,11 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Checkbox from '@mui/material/Checkbox';
 import Modal from '@mui/material/Modal';
 import styles from './TaskItem.module.scss';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import EditIcon from '@mui/icons-material/Edit';
+import { handleModalOpen, selectIsModalOpen } from '../taskSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
 import TaskForm from '../taskForm/TaskForm';
 
