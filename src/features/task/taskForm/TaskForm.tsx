@@ -33,6 +33,7 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
         <TextField
           id='outlined-basic'
           label={!edit ? 'New Task' : editData.title}
+          defaultValue={edit ? { selectedTask.title } : ''}
           variant='outlined'
           inputRef={register}
           name='taskTitle'
