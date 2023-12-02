@@ -28,6 +28,9 @@ export const taskSlice = createSlice({
       };
       state.tasks = [newTask, ...state.tasks];
     },
+    selectTask: (state, action)=>{
+      state.selectedTask=action.payload;
+    }
     handleModalOpen: (state, action) => {
       state.isModalOpen = action.payload;
     },
