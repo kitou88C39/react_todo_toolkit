@@ -40,6 +40,12 @@ export const taskSlice = createSlice({
     handleModalOpen: (state, action) => {
       state.isModalOpen = action.payload;
     },
+    completeTask: (state, action) => {
+      const task = state.tasks.find((t) => t.id === action.payload.id);
+      if (task) {
+        task.completed = !task.completed;
+      }
+    },
   },
 });
 
