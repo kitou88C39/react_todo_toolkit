@@ -28,6 +28,9 @@ export const taskSlice = createSlice({
       };
       state.tasks = [newTask, ...state.tasks];
     },
+    editTask:(state,action)=>{
+     const task=state.tasks.find((t)=>t.id===action.payload.id);
+    }
     selectTask: (state, action) => {
       state.selectedTask = action.payload;
     },
