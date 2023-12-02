@@ -1,13 +1,17 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import TextField from '@mui/material/TextField';
-import { createTask, handleModalOpen, selectSelectedTask } from '../taskSlice';
+import {
+  createTask,
+  editTask,
+  handleModalOpen,
+  selectSelectedTask,
+} from '../taskSlice';
 import styles from './TaskForm.module.scss';
 
 type Inputs = {
   taskTitle: string;
 };
-
 type PropTypes = {
   edit?: boolean;
 };
@@ -21,6 +25,7 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
     reset();
   };
   const handleEdit = (data: Inputs) => {
+    dispatch(editTask(data));
     console.log(data);
   };
 
