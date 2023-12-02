@@ -27,6 +27,7 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
   const handleEdit = (data: Inputs) => {
     const sendData = { ...selectedTask, title: data.taskTitle };
     dispatch(editTask(sendData));
+    dispatch(handleModalOpen(false));
   };
 
   return (
