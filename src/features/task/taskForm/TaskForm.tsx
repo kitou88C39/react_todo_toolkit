@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import TextField from '@mui/material/TextField';
-import { createTask, handleModalOpen } from '../taskSlice';
+import { createTask, handleModalOpen, selectSelectedTask } from '../taskSlice';
 import styles from './TaskForm.module.scss';
 
 type Inputs = {
@@ -14,6 +14,7 @@ type PropTypes = {
 
 const TaskForm: React.FC<PropTypes> = ({ edit }) => {
   const dispatch = useDispatch();
+  const selectedTask = useSelector(selectSelectedTask);
   const { register, handleSubmit, reset } = useForm<Inputs>();
   const handleCreate = (data: Inputs) => {
     dispatch(createTask(data.taskTitle));
