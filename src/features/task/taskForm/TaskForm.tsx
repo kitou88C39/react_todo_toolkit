@@ -25,6 +25,7 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
     reset();
   };
   const handleEdit = (data: Inputs) => {
+    const sendData = { ...selectedTask, title: data.taskTitle };
     dispatch(editTask(data));
     console.log(data);
   };
