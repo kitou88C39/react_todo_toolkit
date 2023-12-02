@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
-import { createTask } from '../taskSlice';
+import { createTask, handleModalOpen } from '../taskSlice';
 import styles from './TaskForm.module.scss';
 
 type Inputs = {
@@ -42,7 +42,11 @@ const TaskForm: React.FC<PropTypes> = ({ edit }) => {
             <button type='submit' className={styles.submit_button}>
               Submit
             </button>
-            <button type='button' className={styles.cancel_button}>
+            <button
+              type='button'
+              onClick={() => dispatch(handleModalOpen(false))}
+              className={styles.cancel_button}
+            >
               Cancel
             </button>
           </div>
