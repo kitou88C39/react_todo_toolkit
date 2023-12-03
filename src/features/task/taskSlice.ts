@@ -30,9 +30,10 @@ export const taskSlice = createSlice({
     },
     editTask: (state, action) => {
       const task = state.tasks.find((t) => t.id === action.payload.id);
-      if (task) {
-        task.title = action.payload.title;
       }
+    },
+    deleteTask: (state, action) => {
+      state.task = state.tasks.find((t) => t.id === action.payload.id);
     },
     selectTask: (state, action) => {
       state.selectedTask = action.payload;
@@ -53,6 +54,7 @@ export const {
   createTask,
   completeTask,
   editTask,
+  deleteTask,
   handleModalOpen,
   selectTask,
 } = taskSlice.actions;
