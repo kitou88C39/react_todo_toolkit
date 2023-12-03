@@ -7,8 +7,9 @@ import EventNoteIcon from '@mui/icons-material/EventNote';
 import EditIcon from '@mui/icons-material/Edit';
 import {
   completeTask,
-  selectTask,
+  deleteTask,
   handleModalOpen,
+  selectTask,
   selectIsModalOpen,
 } from '../taskSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -45,7 +46,7 @@ const TaskItem: React.FC<PropTypes> = ({ task }) => {
           <EditIcon className={styles.icon} />
         </button>
         <button
-          onClick={() => console.log(`delete ${task.id}`)}
+          onClick={() => dispatch(deleteTask(task))}
           className={styles.delete_button}
         >
           <DeleteIcon className={styles.icon} />
